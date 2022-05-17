@@ -170,7 +170,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return Math.random() * (2 - 0);
+  return Math.random(2,0);
 }
 
 function esPositivo(numero) {
@@ -182,7 +182,7 @@ function esPositivo(numero) {
     return 'Es positivo';
   }else if(num < 0){
     return 'Es negativo';
-  }else{
+  }else if (num == 0){
     return false;
   }
 
@@ -199,14 +199,17 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return nombre +''+ apellido;
+  var nombress = (nombre +' '+ apellido);
+  return nombress;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'Hola'+''+ nombre;
+  var saludo = 'Hola'
+  var saludO = (saludo + nombre + ' !') ;
+  return saludO;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -220,8 +223,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  
-  var perimetro = (lado * lado);
+  var perimetro =  (lado + lado + lado + lado);
   return perimetro;
 }
 
@@ -229,8 +231,8 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  var calculodeArea = (base*altura)*2;
-  return calculodeAre
+  var calculodeArea = (base*altura);
+  return calculodeArea;
 
 }
 
@@ -251,7 +253,8 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if(letra = 'a'|| letra == 'e' || letra == 'i' || letra == 'o'|| letra == 'u'){
+  
+  if(letra === 'a'|| letra === 'e' || letra === 'i' || letra === 'o'|| letra === 'u'){
     return 'Es vocal';
   }else if(letra.length > 1){
     return 'Dato incorrecto';
